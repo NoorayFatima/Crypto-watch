@@ -1,6 +1,6 @@
-# 💎 CryptoWatch Pro: Real-Time Market Pulse
+# 💎 CryptoWatch : Real-Time Market Pulse
 
-**CryptoWatch Pro** is a high-performance, asynchronous financial dashboard built with Vanilla JavaScript. It provides live market data, dynamic search capabilities, and persistent watchlist management, all wrapped in a modern, "Glassmorphism" inspired interface.
+**CryptoWatch** is a high-performance, asynchronous financial dashboard built with Vanilla JavaScript. It provides live market data, dynamic search capabilities, and persistent watchlist management, all wrapped in a modern, "Glassmorphism" inspired interface.
 
 ![CryptoWatch Pro Dashboard](./assets/project-screenshot.png)
 
@@ -46,7 +46,7 @@ Clean Code Patterns: Decoupling the "Fetch" logic from the "UI" logic to make th
 ## 🔧 Installation & Setup
 Clone the repository:
 
-git clone [https://github.com/your-username/cryptowatch-pro.git](https://github.com/your-username/cryptowatch-pro.git)
+git clone [https://github.com/your-username/cryptowatch-pro.git](https://github.com/your-username/Crypto-watch.git)
 
 
 ## 🛡️ License
