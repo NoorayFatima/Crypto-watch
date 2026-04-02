@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoWatch | Live Pulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="holographic-header-wrapper">
+        <header>
+            <div class="brand">
+                <div class="crypto-pulse-logo">
+                    <svg viewBox="0 0 100 100" class="pulse-svg">
+                        <circle cx="50" cy="50" r="40" stroke="#00f2ff" stroke-width="2" fill="none" class="pulse-circle" />
+                        <circle cx="50" cy="50" r="10" fill="#00f2ff" class="pulse-dot" />
+                    </svg>
+                </div>
+                <h1>Crypto<span>Watch</span></h1>
+            </div>
+            <div class="search-glass-container">
+                <span class="search-prefix">CRYPTO//</span>
+                <input type="text" id="coin-search" placeholder="Search markets (e.g. BTC)...">
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <main class="dashboard-grid">
+            
+            <section class="live-market">
+                <div class="section-title">
+                    <div class="live-dot-glow"></div>
+                    <h2>Live Market Dashboard</h2>
+                    <span class="per-page-hint">Top 50 Pairs</span>
+                </div>
+                <div id="market-list" class="market-grid">
+                    </div>
+            </section>
+
+            <aside class="watchlist-aside">
+                <div class="section-title">
+                    <h2>Your Watchlist</h2>
+                </div>
+                <div id="favorite-list" class="watchlist-stack">
+                    </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

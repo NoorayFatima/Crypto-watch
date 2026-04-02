@@ -1,0 +1,196 @@
+:root {
+    --bg: #070709;
+    --app-bg: #0c0d10;
+    --card: #14161a;
+    --glass-card: rgba(20, 22, 26, 0.6);
+    --accent: #00f2ff;
+    --accent-glow: rgba(0, 242, 255, 0.3);
+    --text: #e8eaf0;
+    --text-muted: #8c92a3;
+    --border: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+/* Holographic Header */
+.holographic-header-wrapper {
+    background: var(--glass-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.brand { display: flex; align-items: center; gap: 15px; }
+
+h1 { font-size: 1.5rem; letter-spacing: -1px; font-weight: 700; }
+h1 span { color: var(--accent); text-shadow: 0 0 20px var(--accent); }
+
+.crypto-pulse-logo { width: 35px; height: 35px; }
+.pulse-svg { animation: rotation 10s linear infinite; }
+.pulse-circle { animation: pulseCircle 2s infinite; }
+.pulse-dot { animation: pulseDot 2s infinite; }
+
+.search-glass-container {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    width: 320px;
+}
+
+.search-prefix { color: var(--accent); font-size: 0.7rem; font-weight: bold; opacity: 0.5; }
+
+#coin-search {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+#coin-search:focus { outline: none; }
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2.8fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 { font-size: 1.3rem; font-weight: 500; }
+.live-dot-glow {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    animation: pulseDot 1.5s infinite;
+}
+
+.per-page-hint { color: var(--text-muted); font-size: 0.8rem; margin-left: auto; }
+
+/* Market Cards (Modern Neomorphic) */
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.coin-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3), -10px -10px 20px rgba(255,255,255,0.01);
+}
+
+.coin-card:hover {
+    border-color: rgba(0, 242, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 242, 255, 0.1);
+}
+
+.coin-card img {
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+}
+
+.coin-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.change-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.change-badge.up { background: rgba(0, 255, 136, 0.1); color: #00ff88; }
+.change-badge.down { background: rgba(255, 71, 71, 0.1); color: #ff4747; }
+
+.watch-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.watch-btn:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: white;
+}
+
+/* Watchlist Aside */
+.watchlist-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.fav-item {
+    background: var(--card);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.fav-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: var(--border);
+}
+
+/* Animations */
+@keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulseCircle { 0% { opacity: 0.2; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.05); } 100% { opacity: 0.2; transform: scale(1); } }
+@keyframes pulseDot { 0% { box-shadow: 0 0 5px var(--accent); } 50% { box-shadow: 0 0 15px var(--accent), 0 0 30px var(--accent); } 100% { box-shadow: 0 0 5px var(--accent); } }
